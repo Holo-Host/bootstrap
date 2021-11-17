@@ -19,3 +19,11 @@ route = "bootstrap.holo.host/*"
 kv_namespaces = [
  { binding = "BOOTSTRAP", id = "95561bdb2dbc41e8bf6e2975e49a1f6c" }
 ]
+
+[env.holodev]
+name = "holodev-bootstrap"
+workers_dev = false
+route = "holodev-bootstrap.holo.host/*"
+kv_namespaces = [
+ { binding = "BOOTSTRAP", id = "c6fa1b5f9491488e947814c185b47529" }
+]
