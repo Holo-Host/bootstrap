@@ -5,7 +5,7 @@ workers_dev = true
 webpack_config = "webpack.config.js"
 zone_id = "35f34e8f9d04ef8c87283ea9fb812989"
 route = "devnet-bootstrap.holo.host/*"
-vars = { ENVIRONMENT = "dev" }
+vars = { ENVIRONMENT = "production" }
 
 kv_namespaces = [
  { binding = "BOOTSTRAP", id = "af6400fe4b724c4f871381d676a6f7d6", preview_id = "349a0cf3b1ea4b4999ffe11e66f0a7fc" }
@@ -15,7 +15,15 @@ kv_namespaces = [
 name = "mainnet-bootstrap"
 workers_dev = false
 vars = { ENVIRONMENT = "production" }
-route = "bootstrap.holo.host"
+route = "bootstrap.holo.host/*"
 kv_namespaces = [
- { binding = "BOOTSTRAP", id = "95561bdb2dbc41e8bf6e2975e49a1f6c", preview_id = "30ff63d04cb5433db469a041f67783da" }
+ { binding = "BOOTSTRAP", id = "95561bdb2dbc41e8bf6e2975e49a1f6c" }
+]
+
+[env.holodev]
+name = "holodev-bootstrap"
+workers_dev = false
+route = "holodev-bootstrap.holo.host/*"
+kv_namespaces = [
+ { binding = "BOOTSTRAP", id = "c6fa1b5f9491488e947814c185b47529" }
 ]
